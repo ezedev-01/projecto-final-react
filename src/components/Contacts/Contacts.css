@@ -1,0 +1,68 @@
+.contacts_container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Item de contacto individual */
+.contact_item {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    height: 72px;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid #e9edef; /* Límite suave legible */
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+}
+
+/* Efecto hover con contraste accesible */
+.contact_item:hover {
+    background-color: #f5f6f6;
+}
+
+/* Estado activo (contacto seleccionado) */
+.contact_item.active {
+    background-color: #e9edef;
+}
+
+/* Imagen de perfil */
+.contact_item img {
+    height: 49px;
+    width: 49px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+/* Información del contacto */
+.contact_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Nombre del contacto (Cumple con contraste de accesibilidad) */
+.contact_info h2 {
+    font-size: 16px;
+    color: #111b21; /* Texto oscuro sobre fondo claro */
+    font-weight: 500;
+    margin: 0;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Estado cuando no hay resultados en la búsqueda */
+.no_contacts {
+    padding: 20px;
+    text-align: center;
+    color: #3b4a54; /* Gris oscuro legible */
+    font-size: 14px;
+}
